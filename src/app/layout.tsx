@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Merriweather } from "next/font/google";
 import "./globals.css";
 import AOSanimate from "./AOSanimate";
-import Navbar from "@/components/Navbar";
+import StarAnimation from "@/components/StarAnimation";
 
 const inter = Inter({ subsets: ["latin"] });
+const merriweather = Merriweather({
+  subsets: ["latin"],
+  weight: "900",
+  variable: "--font-merriweather",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,7 +23,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} ${merriweather.variable}`}>
+        <StarAnimation />
         <AOSanimate>{children}</AOSanimate>
       </body>
     </html>

@@ -138,7 +138,7 @@ export default function Navbar() {
           <li key={link.name}>
             <a
               href={link.href}
-              className="flex items-center gap-2 rounded-md border border-transparent p-2 px-3 font-extrabold uppercase transition-all hover:border-slate-800 hover:text-gray-100"
+              className="flex items-center gap-2 rounded-md border border-transparent p-2 px-3 font-extrabold uppercase transition-all hover:border-slate-800 hover:text-gray-100 active:scale-90"
             >
               <link.icon />
               <span>{link.name}</span>

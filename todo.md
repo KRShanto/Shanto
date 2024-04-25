@@ -2,3 +2,4 @@
 
 - [ ] SEO
 - [ ] Image Optimization
+- [ ] Chatbot Assistant
