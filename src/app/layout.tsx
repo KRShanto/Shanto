@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Merriweather } from "next/font/google";
 import "./globals.css";
-import AOSanimate from "./AOSanimate";
+import AOSanimate from "../components/AOSanimate";
 import StarAnimation from "@/components/StarAnimation";
 
 const inter = Inter({ subsets: ["latin"] });
