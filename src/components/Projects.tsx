@@ -123,6 +123,8 @@ export default function Projects() {
             <div
               key={index}
               className="flex w-[500px] flex-col justify-between rounded-xl border border-slate-700 p-5"
+              data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+              data-aos-delay={`${(index % 2) * 100}`}
             >
               {project.image ? (
                 <Image

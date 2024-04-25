@@ -2,6 +2,7 @@ import About from "@/components/About";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
+import Services from "@/components/Services";
 import Skills from "@/components/Skills";
 
 export default async function Page() {
@@ -12,6 +13,7 @@ export default async function Page() {
       <About />
       <Skills />
       <Projects />
+      <Services />
     </div>
   );
 }
