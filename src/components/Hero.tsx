@@ -16,7 +16,7 @@ export default function Hero() {
         alt="Shanto"
         width={350}
         height={100}
-        className="rounded-md"
+        className="rounded-md border border-gray-500"
       />
 
       <div className="">
@@ -24,12 +24,9 @@ export default function Hero() {
           KR Shanto
         </h1>
         <div className="mt-20">
-          <h2
-            className="flex gap-1 text-4xl yellow-gradient"
-            style={merriweather.style}
-          >
-            The Web Emperor{" "}
-            <Image src={CrownIcon} alt="Crown" width={40} height={40} />
+          <h2 className="flex gap-1 text-4xl " style={merriweather.style}>
+            The Web <span className="yellow-gradient">Emperor</span>
+            <Image src={CrownIcon} alt="Crown" width={30} height={30} />
           </h2>
           <p className="text-2xl mt-5 text-gray-300">
             I build websites and web applications,

@@ -14,7 +14,7 @@ body {
 }
 
 .name-gradient {
-  background: linear-gradient(to right, #004cff, #00bbff);
+  background: linear-gradient(to right, #0062ff, #00bbff);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -25,4 +25,34 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.arrive-from-left {
+  animation: arrive-from-left 0.5s ease-out forwards;
+}
+
+.arrive-from-right {
+  animation: arrive-from-right 0.5s ease-out forwards;
+}
+
+@keyframes arrive-from-left {
+  0% {
+    left: -208px;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes arrive-from-right {
+  0% {
+    right: -208px;
+    opacity: 0;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
 }
