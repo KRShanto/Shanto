@@ -117,8 +117,8 @@ export default function Navbar() {
   return (
     <nav
       className={cn(
-        "flex justify-between items-center mt-56 border-b px-5 py-1 border-slate-700 top-0 z-50 backdrop-filter backdrop-blur-lg sticky",
-        { "w-full": shouldShow }
+        "sticky top-0 z-50 mt-56 flex items-center justify-between border-b border-slate-700 px-5 py-1 backdrop-blur-lg backdrop-filter",
+        { "w-full": shouldShow },
       )}
     >
       {/* Title */}
@@ -127,18 +127,18 @@ export default function Navbar() {
         alt="Logo"
         width={50}
         height={50}
-        className={cn("rounded-full opacity-0 relative -left-52", {
+        className={cn("relative -left-52 rounded-full opacity-0", {
           "arrive-from-left": shouldShow,
         })}
       />
 
       {/* Links */}
-      <ul className="flex gap-5 text-lg text-gray-400 ml-48">
+      <ul className="ml-48 flex gap-5 text-lg text-gray-400">
         {links.map((link) => (
           <li key={link.name}>
             <a
               href={link.href}
-              className="flex gap-2 items-center uppercase font-extrabold hover:text-gray-100 transition-all border border-transparent hover:border-slate-800 p-2 rounded-md px-3"
+              className="flex items-center gap-2 rounded-md border border-transparent p-2 px-3 font-extrabold uppercase transition-all hover:border-slate-800 hover:text-gray-100"
             >
               <link.icon />
               <span>{link.name}</span>
@@ -149,7 +149,7 @@ export default function Navbar() {
 
       {/* Social links */}
       <ul
-        className={cn("gap-4 opacity-0 flex items-center relative -right-52", {
+        className={cn("relative -right-52 flex items-center gap-4 opacity-0", {
           "arrive-from-right": shouldShow,
         })}
       >
@@ -161,7 +161,7 @@ export default function Navbar() {
                 alt={link.alt}
                 width={30}
                 height={30}
-                className="hover:scale-110 transition-all"
+                className="transition-all hover:scale-110"
               />
             </a>
           </li>

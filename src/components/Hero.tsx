@@ -9,7 +9,7 @@ const acme = Acme({ subsets: ["latin"], weight: "400" });
 
 export default function Hero() {
   return (
-    <div className="flex mt-20 items-center gap-10">
+    <div className="mt-20 flex items-center gap-10">
       {/* My image */}
       <Image
         src={ShantoImage}
@@ -28,7 +28,7 @@ export default function Hero() {
             The Web <span className="yellow-gradient">Emperor</span>
             <Image src={CrownIcon} alt="Crown" width={30} height={30} />
           </h2>
-          <p className="text-2xl mt-5 text-gray-300">
+          <p className="mt-5 text-2xl text-gray-300">
             I build websites and web applications,
             <br />
             with passion and dedication.

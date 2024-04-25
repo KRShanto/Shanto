@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 
 export default async function Page() {
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col items-center justify-center">
       <Hero />
       <Navbar />
       <div className="mt-56"></div>
