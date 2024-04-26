@@ -72,11 +72,11 @@ export default function Services() {
                 <h3 className="text-3xl font-bold text-gray-300">
                   {service.title}
                 </h3>
-                <p className="w-[550px] text-xl leading-8 text-gray-400">
+                <p className="mt-5 w-[550px] text-xl leading-8 text-gray-400">
                   {service.description}
                 </p>
               </div>
-              <Lottie animationData={service.animation} className="h-56 w-56" />
+              {/* <Lottie animationData={service.animation} className="h-56 w-56" /> */}
             </div>
           ))}
         </div>
