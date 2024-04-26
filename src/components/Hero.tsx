@@ -21,8 +21,10 @@ export default function Hero() {
         <h1 className="name-gradient text-8xl" style={acme.style}>
           KR Shanto
         </h1>
+        <p className="ml-2 text-xl text-slate-400">From Bangladesh 🇧🇩</p>
+
         <div className="mt-20">
-          <h2 className="font-merriweather flex gap-1 text-4xl">
+          <h2 className="flex gap-1 font-merriweather text-4xl">
             The Web <span className="yellow-gradient">Emperor</span>
             <Image src={CrownIcon} alt="Crown" width={30} height={30} />
           </h2>
