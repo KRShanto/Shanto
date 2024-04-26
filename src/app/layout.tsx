@@ -4,6 +4,7 @@ import "./globals.css";
 import AOSanimate from "../components/AOSanimate";
 import StarAnimation from "@/components/StarAnimation";
 import Footer from "@/components/Footer";
+import TopLoader from "@/components/TopLoader";
 
 const inter = Inter({ subsets: ["latin"] });
 const merriweather = Merriweather({
@@ -25,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} ${merriweather.variable}`}>
+        <TopLoader />
         <StarAnimation />
         <AOSanimate>{children}</AOSanimate>
         <Footer />
