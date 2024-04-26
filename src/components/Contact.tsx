@@ -25,7 +25,10 @@ export default function Contact() {
           {/* Left side */}
           <div className="flex flex-col gap-5">
             {/* Email button */}
-            <button className="flex flex-col items-start rounded-full border border-slate-700 p-2 px-5 transition-all hover:border-slate-400 active:scale-95">
+            <button
+              className="flex flex-col items-start rounded-full border border-slate-700 p-2 px-5 transition-all hover:border-slate-400 active:scale-95"
+              data-aos="fade-right"
+            >
               <div className="flex items-center gap-2">
                 <MdEmail className="text-3xl" />
                 <span className="text-2xl">Email Me</span>
@@ -34,7 +37,10 @@ export default function Contact() {
             </button>
 
             {/* WhatsApp button */}
-            <button className="flex flex-col items-start rounded-full border border-slate-700 p-2 px-5 transition-all hover:border-slate-400 active:scale-95">
+            <button
+              className="flex flex-col items-start rounded-full border border-slate-700 p-2 px-5 transition-all hover:border-slate-400 active:scale-95"
+              data-aos="fade-right"
+            >
               <div className="flex items-center gap-2">
                 <BsWhatsapp className="text-3xl" />
                 <span className="text-2xl">WhatsApp</span>
@@ -46,6 +52,7 @@ export default function Contact() {
             <Link
               href="/website"
               className="relative flex items-center gap-2 overflow-hidden rounded-full p-2 px-5 transition-all active:scale-95"
+              data-aos="fade-right"
             >
               <div className="absolute inset-0 z-0">
                 <div className="h-full w-full bg-gradient-to-r from-blue-500 to-green-500"></div>
@@ -65,6 +72,7 @@ export default function Contact() {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 rounded-full border border-slate-700 p-2 px-5 transition-all hover:border-blue-500 hover:text-blue-500 active:scale-95"
+              data-aos="fade-left"
             >
               <FaFacebook className="text-3xl" />
               <p className="text-xl">Connect through Facebook</p>
@@ -76,6 +84,7 @@ export default function Contact() {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 rounded-full border border-slate-700 p-2 px-5 hover:border-blue-600 hover:text-blue-600 active:scale-95"
+              data-aos="fade-left"
             >
               <FaLinkedin className="text-3xl" />
               <p className="text-xl">Connect through LinkedIn</p>
@@ -87,6 +96,7 @@ export default function Contact() {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 rounded-full border border-slate-700 p-2 px-5 hover:border-blue-400 hover:text-blue-400 active:scale-95"
+              data-aos="fade-left"
             >
               <FaTwitter className="text-3xl" />
               <p className="text-xl">Connect through Twitter</p>
@@ -98,6 +108,7 @@ export default function Contact() {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 rounded-full border border-slate-700 p-2 px-5 hover:border-slate-200 active:scale-95"
+              data-aos="fade-left"
             >
               <FaGithub className="text-3xl" />
               <p className="text-xl">View my github</p>

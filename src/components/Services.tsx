@@ -67,6 +67,8 @@ export default function Services() {
             <div
               key={index}
               className="flex items-center gap-5 rounded-2xl border border-slate-700 p-5"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
             >
               <div>
                 <h3 className="text-3xl font-bold text-gray-300">
@@ -76,7 +78,7 @@ export default function Services() {
                   {service.description}
                 </p>
               </div>
-              {/* <Lottie animationData={service.animation} className="h-56 w-56" /> */}
+              <Lottie animationData={service.animation} className="h-56 w-56" />
             </div>
           ))}
         </div>

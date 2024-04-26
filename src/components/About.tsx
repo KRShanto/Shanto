@@ -84,6 +84,8 @@ export default function About() {
             <div
               key={index}
               className="w-[450px] rounded-lg border border-gray-700  p-6"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
             >
               <div className="flex items-center gap-5">
                 <Image
