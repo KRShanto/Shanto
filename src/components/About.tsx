@@ -53,24 +53,6 @@ const about = [
     image: Emoji,
   },
   {
-    title: "UI/UX Designer",
-    description: (
-      <p>
-        As a UI/UX Designer, I specialize in creating visually appealing and
-        intuitive user interfaces that enhance user engagement and satisfaction.
-        My expertise in <b>Figma</b> enables me to design wireframes, mockups,
-        and prototypes that effectively communicate design concepts and
-        functionality. By conducting user research, analyzing user feedback, and
-        iterating on designs, I ensure that the final product meets user needs
-        and aligns with business goals. Whether it&apos;s designing responsive
-        layouts, creating interactive elements, or optimizing user flows, I
-        leverage design thinking and user-centered design principles to deliver
-        exceptional digital experiences.
-      </p>
-    ),
-    image: Flowers,
-  },
-  {
     title: "WordPress Developer",
     description: (
       <p>

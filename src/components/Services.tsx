@@ -76,7 +76,7 @@ export default function Services() {
                   {service.description}
                 </p>
               </div>
-              {/* <Lottie animationData={service.animation} className="h-56 w-56" /> */}
+              <Lottie animationData={service.animation} className="h-56 w-56" />
             </div>
           ))}
         </div>

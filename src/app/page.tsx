@@ -5,7 +5,6 @@ import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
 import Services from "@/components/Services";
 import Skills from "@/components/Skills";
-import Story from "@/components/Story";
 
 export default async function Page() {
   return (
@@ -16,7 +15,6 @@ export default async function Page() {
       <Skills />
       <Projects />
       <Services />
-      <Story />
       <Contact />
     </div>
   );
