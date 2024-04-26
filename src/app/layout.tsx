@@ -3,6 +3,7 @@ import { Inter, Merriweather } from "next/font/google";
 import "./globals.css";
 import AOSanimate from "../components/AOSanimate";
 import StarAnimation from "@/components/StarAnimation";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 const merriweather = Merriweather({
@@ -26,6 +27,7 @@ export default function RootLayout({
       <body className={`${inter.className} ${merriweather.variable}`}>
         <StarAnimation />
         <AOSanimate>{children}</AOSanimate>
+        <Footer />
       </body>
     </html>
   );
