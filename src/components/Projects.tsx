@@ -16,6 +16,10 @@ import EnglishAI from "@/../public/projects/english.png";
 import Image from "next/image";
 import Github from "@/../public/github.svg";
 import Eye from "@/../public/eye.svg";
+import Heroes from "@/../public/projects/heroes.png";
+import Summer from "@/../public/projects/summer.png";
+import Rasel from "@/../public/projects/rasel.png";
+import Star from "@/../public/projects/star.png";
 import { useMediaQuery } from "react-responsive";
 
 const projects = [
@@ -28,12 +32,20 @@ const projects = [
     image: BullyBuddy,
   },
   {
-    title: "YewChat",
+    title: "Star Elevator",
     description:
-      "A chat application built with Yew and Rust. It uses WebSockets for real-time communication. The backend is built with Actix-web",
-    link: null,
+      "Star Elevator is a leading elevator company in Bangladesh. We provide the best quality elevator at an affordable price.",
+    link: "https://starelevatorltd.com/",
     github: null,
-    image: null,
+    image: Star,
+  },
+  {
+    title: "Rasel Mahmud's Portfolio",
+    description:
+      "Portfolio website for Rasel Mahmud, a Professional Web Developer working in Shunno-IT",
+    link: "https://portfolio-next-postgres-prisma.vercel.app/",
+    github: null,
+    image: Rasel,
   },
   {
     title: "DarkNote",
@@ -52,11 +64,12 @@ const projects = [
     image: KRS,
   },
   {
-    title: "Musicify",
-    description: "A spotify like music player",
-    link: null,
-    github: "https://github.com/KRShanto/Musicify",
-    image: Musicify,
+    title: "Minhaz Rahman",
+    description:
+      "Blogging website which teaches about tech, finance, business, and other stuff.",
+    link: "https://minhazrahman.com",
+    github: null,
+    image: Minhaz,
   },
   {
     title: "Meefiil's Portfolio",
@@ -65,13 +78,13 @@ const projects = [
     github: null,
     image: Meefiil,
   },
+
   {
-    title: "OnceInNeverOut",
-    description:
-      "A file sharing website that allows you to share files with a link. The main feature is that the files won't be deleted even if no one downloads it.",
-    link: "https://oncein.vercel.app/",
-    github: "https://github.com/KRShanto/OnceInNeverOut",
-    image: OnceIn,
+    title: "Musicify",
+    description: "A spotify like music player",
+    link: null,
+    github: "https://github.com/KRShanto/Musicify",
+    image: Musicify,
   },
   {
     title: "PassMan",
@@ -82,12 +95,12 @@ const projects = [
     image: PassMan,
   },
   {
-    title: "Minhaz Rahman",
+    title: "English AI",
     description:
-      "Blogging website which teaches about tech, finance, business, and other stuff.",
-    link: "https://minhazrahman.com",
-    github: null,
-    image: Minhaz,
+      "An AI that helps you to learn English. It can also correct your grammar.",
+    link: "",
+    github: "https://github.com/KRShanto/EnglishAI",
+    image: EnglishAI,
   },
   {
     title: "TicTo",
@@ -106,12 +119,28 @@ const projects = [
     image: null,
   },
   {
-    title: "English AI",
+    title: "YewChat",
     description:
-      "An AI that helps you to learn English. It can also correct your grammar.",
-    link: "",
-    github: "https://github.com/KRShanto/EnglishAI",
-    image: EnglishAI,
+      "A chat application built with Yew and Rust. It uses WebSockets for real-time communication. The backend is built with Actix-web",
+    link: null,
+    github: null,
+    image: null,
+  },
+  {
+    title: "Heroes in Pocket",
+    description:
+      "Ignite your imagination with the Super Hero Toy! Vibrant, detailed, and interactive, this toy brings superheroes to life.",
+    link: "https://heroes-in-pocket.web.app",
+    github: null,
+    image: Heroes,
+  },
+  {
+    title: "Summer",
+    description:
+      "Discover the wonders of summer through the lens of your camera. Our Photography Contest is open to all photographers, amateur or professional, from all over the world.",
+    link: "https://summer-photography-camp.web.app/",
+    github: null,
+    image: Summer,
   },
 ];
 
@@ -127,7 +156,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="flex w-[500px] flex-col justify-between rounded-xl border border-slate-700 p-5 max-[1600px]:w-[400px] max-[1600px]:p-3 max-[500px]:w-[300px]"
+              className="flex w-[500px] cursor-default flex-col justify-between rounded-xl border border-slate-700 p-5 max-[1600px]:w-[400px] max-[1600px]:p-3 max-[500px]:w-[300px]"
               data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
               data-aos-delay={`${(index % 2) * 100}`}
             >
