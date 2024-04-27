@@ -1,3 +1,5 @@
+"use client";
+
 import SectionTitle from "./SectionTitle";
 import Fire from "@/../public/fire.svg";
 import Figma from "@/../public/figma.svg";
@@ -26,6 +28,7 @@ import Image from "next/image";
 import Prisma from "@/../public/prisma.svg";
 import Mongoose from "@/../public/mongoose.svg";
 import NextAuth from "@/../public/nextauth.png";
+import { useMediaQuery } from "react-responsive";
 
 // Html, Css, Figma, Node.js, Firebase, Github, React, Tailwind, Javascript, Typescript, Python, Next.js, Mongodb, Mysql, Postgres, Sqlite, Django, PHP, Laravel, Wordpress, Rust, AWS, Prisma, Mongoose, NextAuth
 const skills = [
@@ -132,26 +135,32 @@ const skills = [
 ];
 
 export default function Skills() {
+  const is1600px = useMediaQuery({ query: "(max-width: 1600px)" });
+  const is950px = useMediaQuery({ query: "(max-width: 950px)" });
+  const is700px = useMediaQuery({ query: "(max-width: 700px)" });
+
   return (
     <div id="skills">
-      <div className="mt-48 flex flex-col items-center">
+      <div className="mt-48 flex flex-col items-center max-[1600px]:mt-32 max-[950px]:mt-20">
         <SectionTitle title="My Power/Skills" image={Fire} />
 
-        <div className="mt-14 grid grid-cols-5 gap-14">
+        <div className="mt-14 grid grid-cols-5 gap-14 max-[1600px]:mt-8 max-[1600px]:gap-10 max-[950px]:gap-7 max-[700px]:grid-cols-3">
           {skills.map((skill, index) => (
             <div
               key={index}
               className="flex flex-col items-center"
               data-aos="fade-up"
-              data-aos-delay={`${(index % 5) * 100}`}
+              data-aos-delay={`${(index % (is700px ? 3 : 5)) * 100}`}
             >
               <Image
                 src={skill.image}
                 alt={skill.name}
-                width={70}
-                height={70}
+                width={is950px ? 40 : is1600px ? 50 : 70}
+                height={is950px ? 40 : is1600px ? 50 : 70}
               />
-              <p className="mt-4 text-lg font-semibold">{skill.name}</p>
+              <p className="mt-4 text-lg font-semibold max-[950px]:text-base">
+                {skill.name}
+              </p>
             </div>
           ))}
         </div>

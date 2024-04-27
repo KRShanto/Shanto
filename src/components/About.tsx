@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Search from "@/../public/search.svg";
 import SectionTitle from "./SectionTitle";
@@ -6,6 +8,7 @@ import Emoji from "@/../public/emoji.svg";
 import Flowers from "@/../public/flowers.svg";
 import Painting from "@/../public/painting.svg";
 import Wordpress from "@/../public/wordpress.svg";
+import { useMediaQuery } from "react-responsive";
 
 // TODO: improve the content
 const about = [
@@ -73,17 +76,19 @@ const about = [
 ];
 
 export default function About() {
+  const is1600px = useMediaQuery({ query: "(max-width: 1600px)" });
+
   return (
     <div id="about">
-      <div className="mt-48 flex flex-col items-center">
+      <div className="mt-48 flex flex-col items-center max-[1600px]:mt-32 max-[950px]:mt-20">
         <SectionTitle title="Who am I?" image={Search} />
 
         {/* Use 3d card hover effects */}
-        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <div className="mt-8 grid grid-cols-2 gap-6 max-[1600px]:mt-5 max-[950px]:grid-cols-1 max-[950px]:gap-4">
           {about.map((item, index) => (
             <div
               key={index}
-              className="w-[450px] rounded-lg border border-gray-700  p-6"
+              className="w-[450px] rounded-lg border border-gray-700 p-6 max-[500px]:w-[300px] max-[500px]:p-4"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
@@ -91,14 +96,14 @@ export default function About() {
                 <Image
                   src={item.image}
                   alt={item.title}
-                  width={40}
-                  height={40}
+                  width={is1600px ? 25 : 40}
+                  height={is1600px ? 25 : 40}
                 />
-                <h3 className="text-2xl font-semibold text-slate-300">
+                <h3 className="text-2xl font-semibold text-slate-300 max-[1600px]:text-xl max-[700px]:text-lg">
                   {item.title}
                 </h3>
               </div>
-              <div className="mt-4 leading-8 text-gray-400">
+              <div className="mt-4 leading-8 text-gray-400 max-[1600px]:mt-3 max-[700px]:text-base max-[700px]:leading-9 max-[500px]:text-sm max-[500px]:leading-[2.3rem]">
                 {item.description}
               </div>
             </div>

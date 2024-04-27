@@ -1,11 +1,17 @@
 import About from "@/components/About";
 import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
 import Services from "@/components/Services";
 import Skills from "@/components/Skills";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "KR Shanto - The Web Emperor",
+  description:
+    "I am KR Shanto, a web developer from Bangladesh. I build websites and web applications with passion and dedication.",
+};
 
 export default async function Page() {
   return (

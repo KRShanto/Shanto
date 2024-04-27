@@ -9,7 +9,9 @@ import Authentication from "@/../public/animations/authentication.json";
 import Designer from "@/../public/animations/designer.json";
 import Cms from "@/../public/animations/cms.json";
 import Website from "@/../public/animations/website.json";
-import Lottie from "lottie-react";
+import dynamic from "next/dynamic";
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
+import { useMediaQuery } from "react-responsive";
 
 const services = [
   {
@@ -57,28 +59,41 @@ const services = [
 ];
 
 export default function Services() {
+  const is700px = useMediaQuery({ query: "(max-width: 700px)" });
+
   return (
     <div id="services">
-      <div className="mt-48 flex flex-col items-center">
+      <div className="mt-48 flex flex-col items-center max-[1600px]:mt-32">
         <SectionTitle title="Services | What I do" image={Wrench} />
 
-        <div className="mt-12 flex flex-col items-center space-y-12">
+        <div className="mt-12 flex flex-col items-center space-y-12 max-[1600px]:mt-5 max-[1600px]:space-y-5">
           {services.map((service, index) => (
             <div
               key={index}
-              className="flex items-center gap-5 rounded-2xl border border-slate-700 p-5"
+              className="flex items-center gap-5 rounded-2xl border border-slate-700 p-5 max-[1600px]:gap-3 max-[1600px]:p-3 max-[700px]:flex-col"
               data-aos="fade-up"
-              data-aos-delay={index * 100}
+              data-aos-delay={index * 50}
             >
               <div>
-                <h3 className="text-3xl font-bold text-gray-300">
+                <h3 className="text-3xl font-bold text-gray-300 max-[1600px]:text-2xl max-[950px]:text-xl">
                   {service.title}
                 </h3>
-                <p className="mt-5 w-[550px] text-xl leading-8 text-gray-400">
+                {is700px && (
+                  <Lottie
+                    animationData={service.animation}
+                    className="mx-auto h-40 w-40"
+                  />
+                )}
+                <p className="mt-5 w-[550px] text-xl leading-8 text-gray-400 max-[950px]:w-[450px] max-[950px]:text-base max-[700px]:w-[280px] max-[700px]:leading-9">
                   {service.description}
                 </p>
               </div>
-              <Lottie animationData={service.animation} className="h-56 w-56" />
+              {!is700px && (
+                <Lottie
+                  animationData={service.animation}
+                  className="h-56 w-56 max-[950px]:h-32 max-[950px]:w-32"
+                />
+              )}
             </div>
           ))}
         </div>

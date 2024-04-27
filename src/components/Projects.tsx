@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import SectionTitle from "./SectionTitle";
 import Check from "@/../public/check.svg";
@@ -14,6 +16,7 @@ import EnglishAI from "@/../public/projects/english.png";
 import Image from "next/image";
 import Github from "@/../public/github.svg";
 import Eye from "@/../public/eye.svg";
+import { useMediaQuery } from "react-responsive";
 
 const projects = [
   {
@@ -113,16 +116,18 @@ const projects = [
 ];
 
 export default function Projects() {
+  const is500px = useMediaQuery({ query: "(max-width: 500px)" });
+
   return (
     <div id="projects">
-      <div className="mt-48 flex flex-col items-center">
-        <SectionTitle title="Projects | Things I've done" image={Check} />
+      <div className="mt-48 flex flex-col items-center max-[1600px]:mt-32">
+        <SectionTitle title="Things I've done" image={Check} />
 
-        <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="mt-8 grid grid-cols-2 gap-8 max-[1600px]:mt-5 max-[950px]:grid-cols-1">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="flex w-[500px] flex-col justify-between rounded-xl border border-slate-700 p-5"
+              className="flex w-[500px] flex-col justify-between rounded-xl border border-slate-700 p-5 max-[1600px]:w-[400px] max-[1600px]:p-3 max-[500px]:w-[300px]"
               data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
               data-aos-delay={`${(index % 2) * 100}`}
             >
@@ -130,8 +135,8 @@ export default function Projects() {
                 <Image
                   src={project.image}
                   alt={project.title}
-                  width={500}
-                  height={300}
+                  width={is500px ? 400 : 500}
+                  height={is500px ? 200 : 300}
                   className="rounded-t-md"
                 />
               ) : (
@@ -140,10 +145,12 @@ export default function Projects() {
 
               <div>
                 <div>
-                  <h3 className="mt-5 text-2xl font-bold text-gray-300">
+                  <h3 className="mt-5 text-2xl font-bold text-gray-300 max-[1600px]:text-xl">
                     {project.title}
                   </h3>
-                  <p className="mt-2 text-gray-400">{project.description}</p>
+                  <p className="mt-2 text-gray-400 max-[500px]:text-sm">
+                    {project.description}
+                  </p>
                 </div>
 
                 <div className="mt-4">
