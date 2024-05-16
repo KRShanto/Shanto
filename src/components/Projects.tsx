@@ -40,14 +40,6 @@ const projects = [
     image: Star,
   },
   {
-    title: "Rasel Mahmud's Portfolio",
-    description:
-      "Portfolio website for Rasel Mahmud, a Professional Web Developer working in Shunno-IT",
-    link: "https://portfolio-next-postgres-prisma.vercel.app/",
-    github: null,
-    image: Rasel,
-  },
-  {
     title: "DarkNote",
     description:
       "A note-taking website organized by folders. It also has rich text editing capabilities.",
@@ -109,22 +101,6 @@ const projects = [
     link: "https://ticto.vercel.app/",
     github: "https://github.com/KRShanto/TicTo",
     image: TicTo,
-  },
-  {
-    title: "Web Dev Help",
-    description:
-      "A website where you can ask questions about web development. It is like StackOverflow but for web development only.",
-    link: null,
-    github: "https://github.com/KRShanto/WebDevHelpWebsite",
-    image: null,
-  },
-  {
-    title: "YewChat",
-    description:
-      "A chat application built with Yew and Rust. It uses WebSockets for real-time communication. The backend is built with Actix-web",
-    link: null,
-    github: null,
-    image: null,
   },
   {
     title: "Heroes in Pocket",
