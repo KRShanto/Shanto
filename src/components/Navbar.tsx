@@ -5,6 +5,8 @@ import {
   FaRegHandshake,
   FaHistory,
   FaInfoCircle,
+  FaPen,
+  FaGlobe,
 } from "react-icons/fa";
 import { MdWork } from "react-icons/md";
 import { GrProjects } from "react-icons/gr";
@@ -57,14 +59,15 @@ const links = [
     icon: MdWork,
   },
   {
-    name: "Story",
-    href: "/story",
-    icon: FaHistory,
-  },
-  {
     name: "Contact",
     href: "#contact",
     icon: FaPhone,
+  },
+  {
+    name: "Blog",
+    href: "https://krshanto.blog",
+    icon: FaGlobe,
+    external: true,
   },
 ];
 
@@ -162,6 +165,7 @@ export default function Navbar() {
               <Link
                 href={link.href}
                 className="flex items-center gap-2 rounded-md border border-transparent p-2 px-3 text-lg font-extrabold uppercase transition-all hover:border-slate-800 hover:text-gray-100 active:scale-90 max-[1600px]:text-sm"
+                target={link.external ? "_blank" : undefined}
               >
                 <link.icon />
                 <span>{link.name}</span>
