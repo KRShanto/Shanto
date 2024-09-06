@@ -51,7 +51,11 @@ export default function About() {
             </p>
           </div>
           <div className="max-[1600px]:hidden " data-aos="zoom-in">
-            <Image src={Shanto2} alt="Shanto" className="rounded-full" />
+            <Image
+              src={Shanto2}
+              alt="Shanto"
+              className="z-20 rounded-full border-2 border-green-500"
+            />
           </div>
         </div>
       </div>
