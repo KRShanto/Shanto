@@ -5,6 +5,7 @@ import AOSanimate from "../components/AOSanimate";
 import StarAnimation from "@/components/StarAnimation";
 import Footer from "@/components/Footer";
 import TopLoader from "@/components/TopLoader";
+import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 
 const inter = Inter({ subsets: ["latin"] });
 const merriweather = Merriweather({
@@ -29,6 +30,7 @@ export default function RootLayout({
         className={`${inter.className} ${merriweather.variable} w-screen overflow-x-hidden`}
       >
         <TopLoader />
+        <ResponsiveNavbar />
         <StarAnimation />
         <AOSanimate>{children}</AOSanimate>
         <Footer />
