@@ -6,3 +6,4 @@
 - [x] Use `aos` animation for every section
 - [ ] Email/WhatsApp copy button
 - [ ] Mobile Navbar
+- [ ] Website Form validation

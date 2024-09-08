@@ -1,47 +1,13 @@
-"use client";
+import React from "react";
+import MainPage from "./MainPage";
+import { Metadata } from "next";
 
-import Link from "next/link";
-import { useState } from "react";
-
-import Topbar from "./Topbar";
-import Header from "./Header";
+export const metadata: Metadata = {
+  title: "Submit your website requirements",
+  description:
+    "Submit your website requirements. We will get back to you with a quote.",
+};
 
 export default function Page() {
-  const [personalInfo, setPersonalInfo] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    preferredTime: "",
-    country: "",
-    links: [],
-  });
-  const [businessInfo, setBusinessInfo] = useState({
-    name: "",
-    email: "",
-    about: "",
-    role: "",
-    description: "",
-    links: [],
-  });
-  const [websiteInfo, setWebsiteInfo] = useState({
-    website: "",
-    type: "",
-    description: "",
-    design: "",
-    deadline: 500,
-    budget: "",
-    additionalInfo: "",
-  });
-  const [step, setStep] = useState(1);
-  const [completed, setCompleted] = useState([0]);
-
-  return (
-    <div className="mt-10">
-      <Header />
-
-      <div className="mx-auto mt-5 h-[650px] w-[1300px] rounded-lg border border-slate-600 p-3">
-        <Topbar step={step} setStep={setStep} completed={completed} />
-      </div>
-    </div>
-  );
+  return <MainPage />;
 }
