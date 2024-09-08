@@ -1,17 +1,25 @@
 import { FaArrowRight, FaCheck } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 interface PricingPlan {
   name: string;
-  price: string;
+  price: number | null;
   features: string[];
   isPopular: boolean;
 }
 
+// TODO: improve metadata
+export const metadata = {
+  title: "Create Professional Portfolio Website that Shines",
+  description:
+    "Create a professional portfolio website that showcases your work and attracts clients.",
+};
+
 const pricing: PricingPlan[] = [
   {
     name: "Basic",
-    price: "$500",
+    price: 500,
     features: [
       "Custom design",
       "Responsive layout",
@@ -23,7 +31,7 @@ const pricing: PricingPlan[] = [
   },
   {
     name: "Pro",
-    price: "$1000",
+    price: 1000,
     features: [
       "Everything in Basic",
       "Up to 10 pages",
@@ -36,7 +44,7 @@ const pricing: PricingPlan[] = [
   },
   {
     name: "Enterprise",
-    price: "Custom",
+    price: null,
     features: [
       "Everything in Pro",
       "Unlimited pages",
@@ -75,9 +83,12 @@ export default function Page() {
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <Button className="rounded-full bg-blue-600 px-6 py-3 text-lg font-bold text-white hover:bg-blue-700">
+            <Link
+              href="/website?service=portfolio"
+              className="rounded-full bg-blue-600 px-6 py-3 text-lg font-bold text-white hover:bg-blue-700"
+            >
               Get Started
-            </Button>
+            </Link>
           </div>
         </div>
       </div>
@@ -133,7 +144,9 @@ export default function Page() {
                   </span>
                 )}
                 <h3 className="mb-2 text-xl font-semibold">{plan.name}</h3>
-                <p className="mb-4 text-3xl font-bold">{plan.price}</p>
+                <p className="mb-4 text-3xl font-bold">
+                  {plan.price ? `$${plan.price}` : "Contact for pricing"}
+                </p>
                 <ul className="mb-4 flex-grow">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="mb-2 flex items-center">
@@ -142,19 +155,25 @@ export default function Page() {
                     </li>
                   ))}
                 </ul>
-                <Button className="rounded bg-blue-600 px-4 py-2 text-lg font-bold text-white hover:bg-blue-700">
+                <Link
+                  className="rounded-full bg-blue-600 px-4 py-2 text-center text-lg font-bold text-white hover:bg-blue-700"
+                  href={`/website?service=portfolio&price=${!plan.price ? 2500 : plan.price}`}
+                >
                   Choose Plan
-                </Button>
+                </Link>
               </div>
             ))}
           </div>
         </section>
 
         <div className="text-center" data-aos="fade-up">
-          <Button className="inline-flex items-center rounded bg-blue-600 px-10 py-5 text-lg font-bold text-white hover:bg-blue-700">
+          <Link
+            href="/website?service=portfolio"
+            className="inline-flex items-center rounded bg-blue-600 px-10 py-3 text-lg font-bold text-white hover:bg-blue-700"
+          >
             Get Started
             <FaArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+          </Link>
         </div>
       </div>
     </main>

@@ -1,6 +1,7 @@
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import SectionTitle from "./SectionTitle";
 import Wrench from "@/../public/wrench.svg";
+import Link from "next/link";
 
 export default function Services() {
   const services = [
@@ -17,6 +18,7 @@ export default function Services() {
         "Easy-to-update",
         "Contact integration",
       ],
+      link: "/service/portfolio",
     },
     {
       name: "Blogging Website",
@@ -31,6 +33,7 @@ export default function Services() {
         "Comments & engagement",
         "Scalable platform",
       ],
+      link: "/service/blogging",
     },
     {
       name: "Custom Website",
@@ -45,6 +48,7 @@ export default function Services() {
         "Custom CMS",
         "Ongoing support & maintenance",
       ],
+      link: "/service/custom",
     },
   ];
 
@@ -86,6 +90,13 @@ export default function Services() {
                   </li>
                 ))}
               </ul>
+
+              <Link
+                href={service.link}
+                className="mt-5 rounded-lg bg-blue-900 px-4 py-2 text-center text-xl text-white hover:bg-blue-800 max-[1600px]:text-lg"
+              >
+                Learn more
+              </Link>
             </div>
           ))}
         </div>
