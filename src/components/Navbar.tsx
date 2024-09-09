@@ -22,6 +22,7 @@ import Email from "@/../public/email.svg";
 import Image from "next/image";
 import Logo from "@/../public/logo.png";
 import {
+  BLOG,
   EMAIL,
   FACEBOOK,
   GITHUB,
@@ -65,7 +66,7 @@ const links = [
   },
   {
     name: "Blog",
-    href: "https://krshanto.blog",
+    href: BLOG,
     icon: FaGlobe,
     external: true,
   },

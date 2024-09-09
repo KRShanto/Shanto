@@ -32,12 +32,13 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 import { sendMail } from "@/actions/sendMail";
+import { CALENDLY } from "@/lib/consts";
 
 // TODO: Add form validation
 // TODO: make this component more readable
 export default function MainPage() {
   const [activeSection, setActiveSection] = useState("personal");
-  const [successDialog, setSuccessDialog] = useState(false);
+  const [successDialog, setSuccessDialog] = useState(true);
   const [errorDialog, setErrorDialog] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -433,7 +434,9 @@ export default function MainPage() {
               No Thanks
             </AlertDialogCancel>
             <AlertDialogAction className="bg-blue-500 hover:bg-blue-600">
-              Yes, Sure
+              <a href={CALENDLY} target="_blank" rel="noopener noreferrer">
+                Yes, Sure
+              </a>
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>

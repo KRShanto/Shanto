@@ -5,6 +5,7 @@ import ShantoImage from "@/../public/shanto.png";
 import CrownIcon from "@/../public/crown.svg";
 import { Merriweather, Acme } from "next/font/google";
 import { useMediaQuery } from "react-responsive";
+import { CALENDLY } from "@/lib/consts";
 
 const acme = Acme({ subsets: ["latin"], weight: "400" });
 
@@ -61,18 +62,12 @@ export default function Hero() {
 
         <div className="mt-14 flex gap-3 max-[1600px]:mt-10 max-[700px]:justify-center max-[500px]:mt-8">
           <a
-            href="#contact"
-            className="rounded-md border border-slate-700 p-2 px-10 font-bold transition-all hover:border-blue-500 hover:text-blue-500 active:scale-90 max-[1600px]:text-sm "
-            data-aos="fade-right"
-          >
-            Hire me
-          </a>
-          <a
-            href="#"
+            href={CALENDLY}
             className="rounded-md border border-slate-700 p-2 px-10 font-bold transition-all hover:border-blue-500 hover:text-blue-500 active:scale-90 max-[1600px]:text-sm"
-            data-aos="fade-left"
+            data-aos="fade-right"
+            target="_blank"
           >
-            Resume
+            Book a Meeting
           </a>
         </div>
       </div>
