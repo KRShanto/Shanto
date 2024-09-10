@@ -6,6 +6,7 @@ import StarAnimation from "@/components/StarAnimation";
 import Footer from "@/components/Footer";
 import TopLoader from "@/components/TopLoader";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 const merriweather = Merriweather({
@@ -34,6 +35,7 @@ export default function RootLayout({
         <StarAnimation />
         <AOSanimate>{children}</AOSanimate>
         <Footer />
+        <GoogleAnalytics gaId="G-LC07X3X15K" />
       </body>
     </html>
   );
